@@ -1,0 +1,12 @@
+This state-threads copied from srs, and we add some extra functions, such as:
+* support openssl
+* support mult-threads
+* support modern compiler
+
+to comple this st, you need install openssl
+for ubuntu 18.04, you can install openssl as follows:
+sudo apt-get install openssl
+sudo apt-get install libssl-dev
+
+then, you can compile st under ubuntu as:
+make linux-debug EXTRA_CFLAGS="-DMD_HAVE_EPOLL"
